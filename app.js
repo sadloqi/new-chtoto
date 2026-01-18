@@ -73,3 +73,61 @@ quiz.addEventListener('submit', (event) => {
 
     result.innerHTML = unicornType;
 });
+document.addEventListener('DOMContentLoaded', function () {
+    const pages = document.querySelectorAll('.page');
+    let currentPageIndex = 0;
+
+    // Функция обновления состояния кнопки "Далее"
+    function updateNextButton() {
+        const currentPage = pages[currentPageIndex];
+        const nextButton = currentPage.querySelector('.next-page');
+        const radioButtons = currentPage.querySelectorAll('input[type="radio"]');
+
+        const isAnyChecked = Array.from(radioButtons).some(radio => radio.checked);
+        nextButton.disabled = !isAnyChecked;
+    }
+
+    // Навешиваем обработчики на все radio-кнопки
+    document.querySelectorAll('input[type="radio"]').forEach(radio => {
+        radio.addEventListener('change', function () {
+            // Находим текущую страницу по родителю
+            const page = this.closest('.page');
+            const index = Array.from(pages).indexOf(page);
+            if (index === currentPageIndex) {
+                updateNextButton();
+            }
+        });
+    });
+
+    // Обработчики кнопок "Далее" и "Назад"
+    document.querySelectorAll('.next-page').forEach(button => {
+        button.addEventListener('click', function () {
+            if (currentPageIndex < pages.length - 1) {
+                pages[currentPageIndex].style.display = 'none';
+                currentPageIndex++;
+                pages[currentPageIndex].style.display = 'block';
+                updateNextButton(); // кнопка будет disabled до выбора
+            }
+        });
+    });
+
+    document.querySelectorAll('.prev-page').forEach(button => {
+        button.addEventListener('click', function () {
+            if (currentPageIndex > 0) {
+                pages[currentPageIndex].style.display = 'none';
+                currentPageIndex--;
+                pages[currentPageIndex].style.display = 'block';
+                updateNextButton(); // восстанавливаем состояние кнопки
+            }
+        });
+    });
+
+    // Инициализация: кнопка на первой странице неактивна
+    updateNextButton();
+});
+if (currentPageIndex === pages.length - 1) {
+    const submitButton = currentPage.querySelector('#show-result');
+    submitButton.disabled = !isAnyChecked;
+} else {
+    nextButton.disabled = !isAnyChecked;
+}
