@@ -21,16 +21,16 @@
             
         </div>
         <div class="card1"></div>
-        
-        <h2>Lets start</h2>
         <form id="unicorn-quiz">
 
             <div class="page" id="page1">
                 <div class="carsa">
-                <img src="https://i.pinimg.com/1200x/24/7b/97/247b97b8f8ceed9c89357c2a65fc16ba.jpg"> 
+                <img src="https://i.pinimg.com/1200x/24/7b/97/247b97b8f8ceed9c89357c2a65fc16ba.jpg">
+                <p>Наруто Узумаки</p>
                 </div>
                     <div class="carsa1">
                         <img src="https://i.pinimg.com/736x/6c/eb/31/6ceb318789b63b37dbeab84ba39c02e8.jpg">
+                        <p>Луффи Мугивара</p>
                     </div>
                 
                 <div class="question">
@@ -41,7 +41,7 @@
                     </div>
                     <div class="answer">
                         <input type="radio" name="q1" id="q1a2" class="radio" value="Б">
-                        <label for="q1a2">Луффи</label>
+                        <label for="q1a2">Луффи Мугивара</label>
                     </div>
                     <div class="answer">
                         <input type="radio" name="q1" id="q1a3" class="radio" value="В">
@@ -50,24 +50,32 @@
                 </div>
                   
                 <div class="actions">
-                  <button type="button" class="next-page">Далее</button>
+                  <button type="button" class="next-page" disabled>Далее</button>
                 </div>
             </div>
 
             <div class="page" id="page2" style="display: none;">
+                <div class="carsa">
+                <img src="https://i.pinimg.com/736x/b1/eb/8f/b1eb8fc1121db8efdfff1c15caa07b69.jpg">
+                <p>Годжо Сатору</p>
+                </div>
+                    <div class="carsa1">
+                        <img src="https://i.pinimg.com/736x/36/c3/9a/36c39a93ee7c7bf4858d4244a2c2b362.jpg">
+                        <p>Сид Кагэно (Тень)</p>
+                    </div>
                 <div class="question">
-                    <h3>Что для тебя самое важное в дружбе?</h3>
+                    <h3>Кто кого отымеет?</h3>
                     <div class="answer">
                         <input type="radio" name="q2" id="q2a1" class="radio" value="А">
-                        <label for="q2a1">Веселье и приключения</label>
+                        <label for="q2a1">Годжо Сатору</label>
                     </div>
                     <div class="answer">
                         <input type="radio" name="q2" id="q2a2" class="radio" value="Б">
-                        <label for="q2a2">Понимание и поддержка</label>
+                        <label for="q2a2">Сид Кагэно</label>
                     </div>
                     <div class="answer">
                         <input type="radio" name="q2" id="q2a3" class="radio" value="В">
-                        <label for="q2a3">Общие интересы и цели</label>
+                        <label for="q2a3">хз</label>
                     </div>
                 </div>
                 <div class="actions">
@@ -77,19 +85,27 @@
             </div>
 
             <div class="page" id="page3" style="display: none;">
+                <div class="carsa">
+                <img src="https://i.pinimg.com/736x/16/f7/05/16f705fad36b5fb1f93f888dd187bb33.jpg">
+                <p>Сан Гогу</p>
+                </div>
+                    <div class="carsa1">
+                        <img src="https://i.pinimg.com/736x/bc/36/88/bc36885cf6c9095003f607ca7950384b.jpg">
+                        <p>Сайтама</p>
+                    </div>
                 <div class="question">
-                    <h3>Какой волшебный предмет ты бы выбрал?</h3>
+                    <h3>Кто кого отымеет?</h3>
                     <div class="answer">
                         <input type="radio" name="q3" id="q3a1" class="radio" value="А">
-                        <label for="q3a1">Волшебная палочка для создания смеха</label>
+                        <label for="q3a1">Сан Гогу</label>
                     </div>
                     <div class="answer">
                         <input type="radio" name="q3" id="q3a2" class="radio" value="Б">
-                        <label for="q3a2">Книга, исполняющая мечты</label>
+                        <label for="q3a2">Сайтама</label>
                     </div>
                     <div class="answer">
                         <input type="radio" name="q3" id="q3a3" class="radio" value="В">
-                        <label for="q3a3">Сапоги-скороходы для новых открытий</label>
+                        <label for="q3a3">не ебу</label>
                     </div>
                 </div>
                 <div class="actions">
@@ -100,7 +116,7 @@
 
             <div class="page" id="page4" style="display: none;">
                 <div class="question">
-                    <h3>Что ты больше всего ценишь в других?</h3>
+                    <h3>Кто кого отымеет?</h3>
                     <div class="answer">
                         <input type="radio" name="q4" id="q4a1" class="radio" value="А">
                         <label for="q4a1">Чувство юмора и умение веселиться</label>
@@ -122,7 +138,7 @@
 
             <div class="page" id="page5" style="display: none;">
                 <div class="question">
-                    <h3>Если бы ты мог иметь любую волшебную силу, что бы ты выбрал?</h3>
+                    <h3>Кто кого отымеет?</h3>
                     <div class="answer">
                         <input type="radio" name="q5" id="q5a1" class="radio" value="А">
                         <label for="q5a1">Умение дарить радость</label>
@@ -137,6 +153,7 @@
                     </div>
                 </div>
                 <div class="actions">
+                    <button type="button" class="prev-page">Назад</button>
                   <button type="submit" class="primary" id="show-result">Узнать результат</button>
                 </div>
             </div>
