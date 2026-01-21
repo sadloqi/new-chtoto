@@ -4,11 +4,8 @@ let quiz = document.querySelector('#unicorn-quiz');
 let pages = document.querySelectorAll('.page');
 let currentPage = 0;
 
-// Показываем первую страницу
 pages[currentPage].style.display = 'block';
 
-
-// Обработчики кнопок "Далее" и "Назад"
 document.querySelectorAll('.next-page').forEach(button => {
     button.addEventListener('click', () => {
         if (currentPage < pages.length - 1) {
@@ -44,7 +41,7 @@ quiz.addEventListener('submit', (event) => {
     let result = document.querySelector('#result');
 
     if (!answers.q1 || !answers.q2 || !answers.q3 || !answers.q4 || !answers.q5) {
-        result.innerHTML = '<p>Пожалуйста, ответьте на все вопросы!</p>';
+        result.innerHTML = '<p>Ты ответил не на все вопросы!</p>';
         return;
     }
 
@@ -77,7 +74,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const pages = document.querySelectorAll('.page');
     let currentPageIndex = 0;
 
-    // Функция обновления состояния кнопки "Далее"
     function updateNextButton() {
         const currentPage = pages[currentPageIndex];
         const nextButton = currentPage.querySelector('.next-page');
@@ -87,10 +83,8 @@ document.addEventListener('DOMContentLoaded', function () {
         nextButton.disabled = !isAnyChecked;
     }
 
-    // Навешиваем обработчики на все radio-кнопки
     document.querySelectorAll('input[type="radio"]').forEach(radio => {
         radio.addEventListener('change', function () {
-            // Находим текущую страницу по родителю
             const page = this.closest('.page');
             const index = Array.from(pages).indexOf(page);
             if (index === currentPageIndex) {
@@ -99,14 +93,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Обработчики кнопок "Далее" и "Назад"
     document.querySelectorAll('.next-page').forEach(button => {
         button.addEventListener('click', function () {
             if (currentPageIndex < pages.length - 1) {
                 pages[currentPageIndex].style.display = 'none';
                 currentPageIndex++;
                 pages[currentPageIndex].style.display = 'block';
-                updateNextButton(); // кнопка будет disabled до выбора
+                updateNextButton(); 
             }
         });
     });
@@ -117,12 +110,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 pages[currentPageIndex].style.display = 'none';
                 currentPageIndex--;
                 pages[currentPageIndex].style.display = 'block';
-                updateNextButton(); // восстанавливаем состояние кнопки
+                updateNextButton(); 
             }
         });
     });
 
-    // Инициализация: кнопка на первой странице неактивна
     updateNextButton();
 });
 if (currentPageIndex === pages.length - 1) {
@@ -131,5 +123,3 @@ if (currentPageIndex === pages.length - 1) {
 } else {
     nextButton.disabled = !isAnyChecked;
 }
-
-
