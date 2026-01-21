@@ -21,6 +21,8 @@ body {
     padding: 24px 20px;
 }
 
+
+
 header {
     position: sticky;
     top: 0;
@@ -36,21 +38,22 @@ h1 {
     letter-spacing: 0.3px;
 }
 
+
+
 .next-page {
-    background-color: #cccccc; /* неактивный серый */
+    background-color: #cccccc;
     color: #666;
     cursor: not-allowed;
     opacity: 0.7;
   }
 
   .next-page:enabled {
-    background-color: #e2d4df; /* активный зелёный */
+    background-color: #e2d4df; 
     color: white;
     cursor: pointer;
     opacity: 1;
   }
 
-  /* Для кнопки "Узнать результат" (если нужно) */
   #show-result {
     background-color: #cccccc;
     color: #666;
@@ -59,7 +62,7 @@ h1 {
   }
 
   #show-result:enabled {
-    background-color: #e2d4df; /* синий */
+    background-color: #e2d4df;
     color: white;
     cursor: pointer;
     opacity: 1;
@@ -167,6 +170,8 @@ footer {
   
 }
 
+
+
 .carsa img{
     visibility:visible;
     width: 290px;
@@ -254,7 +259,5 @@ button:active {
   transition: all 0.25s;
   -webkit-transition: all 0.25s;
   box-shadow: none;
-  transform: scale(0.98);
-}
   transform: scale(0.98);
 }
