@@ -64,7 +64,7 @@ quiz.addEventListener('submit', (event) => {
 
     let unicornType;
     if (aCount >= bCount && aCount >= cCount) {
-        unicornType = '<h2Уже лучше</h2><p>Ты близок к победе, но все еще впереди</p>';
+        unicornType = '<h2>Уже лучше</h2><p>Ты близок к победе, но все еще впереди</p>';
     } else if (bCount >= aCount && bCount >= cCount) {
         unicornType = '<h2>Имба</h2><p>Красава! А у тебя вообще есть личная жизнь?</p>';
     } else {
@@ -131,4 +131,5 @@ if (currentPageIndex === pages.length - 1) {
 } else {
     nextButton.disabled = !isAnyChecked;
 }
+
 
