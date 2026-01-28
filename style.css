@@ -147,8 +147,10 @@ form {
 }
 
 footer {
-    color: #6a5b7a;
-    text-align: center;
+    color: #583480;
+    top: 94%;  
+    left: 95%; 
+    position: absolute;
 }
 
 .card {
@@ -156,8 +158,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 280px;
-  height: 390px;
+  width: 345px;
+  height: 590px;
   background: rgb(255, 255, 255);
   border-radius: 1rem;
   box-shadow: rgb(255, 0, 0) 0px 6px 12px -2px,
@@ -170,7 +172,16 @@ footer {
   
 }
 
-
+.cardSS img {
+    width: 700px;
+    height: 400px;
+    top: 63%;
+    position: absolute;
+    left: 590px;
+    padding: 10px;
+    border-radius: 20px;
+    
+}
 
 .carsa img{
     visibility:visible;
@@ -179,7 +190,7 @@ footer {
     border-radius: 1rem;
     position: absolute;  
     top: 21%;  
-    left: 156px;
+    left: 190px;
 }
 .carsa1 img{
     visibility:visible;
@@ -188,14 +199,15 @@ footer {
     border-radius: 1rem;
     position: absolute;  
     top: 21%;  
-    left: 1487px;
+    left: 1500px;
 }
 
 .carsa p {
     position: absolute;
-    left: 12%;
+    left: 14%;
     top: 47%;
     font-weight: bold;
+    font-size: larger;
 }
 
 .carsa1 p {
@@ -203,6 +215,23 @@ footer {
     left: 82%;
     top: 47%;
     font-weight: bold;
+    font-size: larger;
+}
+
+.lmao p {
+    position: absolute;
+    left: 8%;
+    top: 50%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+.lmao1 p {
+    position: absolute;
+    left: 1478px;
+    top: 50%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
 }
 
 .card:hover {
@@ -217,8 +246,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 280px;
-  height: 390px;
+  width: 307px;
+  height: 600px;
   background: rgb(255, 255, 255);
   border-radius: 1rem;
   box-shadow: rgb(255, 0, 0) 0px 6px 12px -2px,
