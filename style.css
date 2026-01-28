@@ -177,7 +177,7 @@ footer {
     height: 400px;
     top: 63%;
     position: absolute;
-    left: 590px;
+    left: 585px;
     padding: 10px;
     border-radius: 20px;
     
@@ -199,7 +199,7 @@ footer {
     border-radius: 1rem;
     position: absolute;  
     top: 21%;  
-    left: 1500px;
+    left: 1490px;
 }
 
 .carsa p {
@@ -212,7 +212,7 @@ footer {
 
 .carsa1 p {
     position: absolute;
-    left: 82%;
+    left: 83%;
     top: 47%;
     font-weight: bold;
     font-size: larger;
@@ -228,7 +228,7 @@ footer {
 
 .lmao1 p {
     position: absolute;
-    left: 1478px;
+    left: 1470px;
     top: 50%;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
